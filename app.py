@@ -42,7 +42,7 @@ def predict_datapoint():
         
         pred_pipeline=PredictPipeline()
         results=pred_pipeline.predicts(pred_df)
-        probability = results[0][1] 
+        probability = results[0][0] 
         if probability>0.70:
             risk="(High-risk Observed)"
         elif probability>0.30:

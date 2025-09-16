@@ -1,2 +1,2 @@
 age,time_in_hospital,n_lab_procedures,n_procedures,n_medications,n_outpatient,n_inpatient,n_emergency,medical_specialty,diag_1,diag_2,diag_3,glucose_test,A1Ctest,change,diabetes_med,num_diagnoses,total_med_procedures,age_group_simplified
-[40-50),9,9,6,7,1,1,1,Cardiology,Injury,Injury,MusculoSkeletal,normal,no,no,yes,3,15,Young
+[80-90),2,79,1,26,0,0,0,InternalMedicine,Circulatory,Other,Diabetes,no,no,no,yes,3,80,Senior
