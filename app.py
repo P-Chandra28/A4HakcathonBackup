@@ -53,4 +53,4 @@ def predict_datapoint():
         return render_template(template_name_or_list="home.html",results=f"{probability:.2f}% chance of readmitting",riskvalue=risk)
     
 if __name__=="__main__":
-    app.run(host="0.0.0.0",debug=True)
+    app.run(host="0.0.0.0")
