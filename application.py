@@ -42,15 +42,16 @@ def predict_datapoint():
         
         pred_pipeline=PredictPipeline()
         results=pred_pipeline.predicts(pred_df)
-        probability = results[0][0] 
+        probability = results[0][0]
+        predicted_class= "Readmitted" if probability>=0.5 else "Not Readmitted"
         if probability>0.70:
-            risk="(High-risk Observed)"
+            risk="High-risk Observed"
         elif probability>0.30:
-            risk="(Medium-risk Observed)"
+            risk="Medium-risk Observed"
         else:
-            risk="(Low-risk Observed)"
+            risk="Low-risk Observed"
         probability*=100
-        return render_template(template_name_or_list="home.html",results=f"{probability:.2f}% chance of readmitting",riskvalue=risk)
+        return render_template(template_name_or_list="home.html",class_pred=predicted_class,results=f"({probability:.2f}% chance of readmitting)",riskvalue=risk)
     
 if __name__=="__main__":
-    app.run(host="0.0.0.0")
+    app.run(host="0.0.0.0",debug=True)
